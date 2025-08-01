@@ -1,0 +1,11 @@
+sanic==23.6.0
+pillow==10.0.1
+opencv-python==4.8.1.78
+numpy>=1.26.0
+torch>=2.1.0
+torchvision>=0.16.0
+scikit-image>=0.22.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+setuptools>=69.0.0
+wheel>=0.42.0 

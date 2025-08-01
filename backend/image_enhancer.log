@@ -1,0 +1,302 @@
+2025-08-01 19:46:16,543 - INFO - 应用启动
+2025-08-01 19:46:16,684 - INFO - 
+  ┌─────────────────────────────────────────────────────────────┐
+  │                        Sanic v23.6.0                        │
+  │               Goin' Fast @ http://0.0.0.0:8000              │
+  ├───────────────────────┬─────────────────────────────────────┤
+  │ [48;2;255;13;104m                     [0m │     mode: debug, single worker      │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▄███ █████ ██    [0m │   server: sanic, HTTP/1.1           │
+  │ [38;2;255;255;255;48;2;255;13;104m   ██                [0m │   python: 3.12.8                    │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▀███████ ███▄    [0m │ platform: Windows-11-10.0.26100-SP0 │
+  │ [38;2;255;255;255;48;2;255;13;104m                ██   [0m │ packages: sanic-routing==23.12.0    │
+  │ [38;2;255;255;255;48;2;255;13;104m   ████ ████████▀    [0m │                                     │
+  │ [48;2;255;13;104m                     [0m │                                     │
+  │ Build Fast. Run Fast. │                                     │
+  └───────────────────────┴─────────────────────────────────────┘
+
+2025-08-01 19:46:17,131 - DEBUG - Creating multiprocessing context using 'spawn'
+2025-08-01 19:46:17,131 - DEBUG - [34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+2025-08-01 19:46:17,622 - DEBUG - [34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[60700][0m
+2025-08-01 19:46:17,623 - INFO - <Server sockets=(<asyncio.TransportSocket fd=756, family=2, type=1, proto=6, laddr=('0.0.0.0', 8000)>,)> is serving
+2025-08-01 19:46:17,633 - INFO - Starting worker [60700]
+2025-08-01 19:46:28,979 - INFO - 收到图片上传请求
+2025-08-01 19:46:29,029 - INFO - 文件保存成功: uploads\3dfc8f0ba80865a8_DSC08968.JPG
+2025-08-01 19:46:29,029 - INFO - 开始极致超级清晰增强: uploads\3dfc8f0ba80865a8_DSC08968.JPG
+2025-08-01 19:46:29,053 - INFO - 开始修复图片方向...
+2025-08-01 19:46:29,055 - INFO - 检测到图片方向信息: 1
+2025-08-01 19:46:37,099 - INFO - 图片已高质量放大到 36864x24576
+2025-08-01 19:46:50,737 - INFO - 图片已多级锐化处理
+2025-08-01 19:47:03,438 - INFO - 图片已多级锐化处理
+2025-08-01 19:47:17,409 - INFO - 图片已多级锐化处理
+2025-08-01 19:47:28,558 - INFO - 图片对比度已增强
+2025-08-01 19:47:38,442 - INFO - 图片饱和度已增强
+2025-08-01 19:47:46,828 - INFO - 图片亮度已调整
+2025-08-01 19:48:05,472 - INFO - 图片已再次锐化
+2025-08-01 19:48:28,517 - INFO - 图片已最终边缘增强
+2025-08-01 19:48:50,237 - INFO - 图片已最终锐化
+2025-08-01 19:48:50,238 - INFO - 极致超级清晰增强完成: uploads\3dfc8f0ba80865a8_DSC08968.JPG
+2025-08-01 19:48:59,596 - INFO - 图片处理成功: uploads\3dfc8f0ba80865a8_DSC08968.JPG
+2025-08-01 19:49:02,265 - INFO - 临时文件清理成功: uploads\3dfc8f0ba80865a8_DSC08968.JPG
+2025-08-01 19:49:02,404 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 19:49:02,840 - INFO - 
+2025-08-01 19:49:03,264 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 154.234 seconds
+2025-08-01 19:49:36,057 - INFO - 收到图片上传请求
+2025-08-01 19:49:36,066 - INFO - 文件保存成功: uploads\485a6acfd84a8040_DSC08968.JPG
+2025-08-01 19:49:36,066 - INFO - 开始极致超级清晰增强: uploads\485a6acfd84a8040_DSC08968.JPG
+2025-08-01 19:49:36,075 - INFO - 开始修复图片方向...
+2025-08-01 19:49:36,076 - INFO - 检测到图片方向信息: 1
+2025-08-01 19:49:43,552 - INFO - 图片已高质量放大到 36864x24576
+2025-08-01 19:49:56,736 - INFO - 图片已多级锐化处理
+2025-08-01 19:50:09,603 - INFO - 图片已多级锐化处理
+2025-08-01 19:50:23,512 - INFO - 图片已多级锐化处理
+2025-08-01 19:50:35,079 - INFO - 图片对比度已增强
+2025-08-01 19:50:45,989 - INFO - 图片饱和度已增强
+2025-08-01 19:50:54,831 - INFO - 图片亮度已调整
+2025-08-01 19:51:13,532 - INFO - 图片已再次锐化
+2025-08-01 19:51:36,220 - INFO - 图片已最终边缘增强
+2025-08-01 19:51:58,428 - INFO - 图片已最终锐化
+2025-08-01 19:51:58,429 - INFO - 极致超级清晰增强完成: uploads\485a6acfd84a8040_DSC08968.JPG
+2025-08-01 19:52:08,273 - INFO - 图片处理成功: uploads\485a6acfd84a8040_DSC08968.JPG
+2025-08-01 19:52:11,238 - INFO - 临时文件清理成功: uploads\485a6acfd84a8040_DSC08968.JPG
+2025-08-01 19:52:11,396 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 19:52:11,850 - INFO - 
+2025-08-01 19:52:12,412 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 156.344 seconds
+2025-08-01 19:52:55,823 - INFO - 收到图片上传请求
+2025-08-01 19:52:55,831 - INFO - 文件保存成功: uploads\48ef9dfd305b980f_DSC08968.JPG
+2025-08-01 19:52:55,831 - INFO - 开始超级质量增强: uploads\48ef9dfd305b980f_DSC08968.JPG
+2025-08-01 19:52:55,840 - INFO - 开始修复图片方向...
+2025-08-01 19:52:55,841 - INFO - 检测到图片方向信息: 1
+2025-08-01 19:52:56,541 - INFO - 图片已高质量放大到 9216x6144
+2025-08-01 19:52:57,352 - INFO - 图片已温和锐化处理
+2025-08-01 19:52:57,890 - INFO - 图片对比度已增强
+2025-08-01 19:52:58,291 - INFO - 图片饱和度已增强
+2025-08-01 19:52:58,645 - INFO - 图片亮度已调整
+2025-08-01 19:52:59,499 - INFO - 图片已细节增强
+2025-08-01 19:52:59,500 - INFO - 超级质量增强完成: uploads\48ef9dfd305b980f_DSC08968.JPG
+2025-08-01 19:52:59,836 - INFO - 图片处理成功: uploads\48ef9dfd305b980f_DSC08968.JPG
+2025-08-01 19:52:59,908 - INFO - 临时文件清理成功: uploads\48ef9dfd305b980f_DSC08968.JPG
+2025-08-01 19:52:59,916 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 19:52:59,923 - INFO - 
+2025-08-01 19:52:59,933 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 4.109 seconds
+2025-08-01 19:55:12,426 - DEBUG - KeepAlive Timeout. Closing connection.
+2025-08-01 20:09:04,500 - WARNING - Executing <TimerHandle when=1119117.506 _set_result_unless_cancelled(<Future finis...events.py:448>, None) at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\futures.py:313 created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py:661> took 9.546 seconds
+2025-08-01 20:57:55,849 - INFO - 应用启动
+2025-08-01 20:57:55,943 - INFO - 
+  ┌─────────────────────────────────────────────────────────────┐
+  │                        Sanic v23.6.0                        │
+  │               Goin' Fast @ http://0.0.0.0:8000              │
+  ├───────────────────────┬─────────────────────────────────────┤
+  │ [48;2;255;13;104m                     [0m │     mode: debug, single worker      │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▄███ █████ ██    [0m │   server: sanic, HTTP/1.1           │
+  │ [38;2;255;255;255;48;2;255;13;104m   ██                [0m │   python: 3.12.8                    │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▀███████ ███▄    [0m │ platform: Windows-11-10.0.26100-SP0 │
+  │ [38;2;255;255;255;48;2;255;13;104m                ██   [0m │ packages: sanic-routing==23.12.0    │
+  │ [38;2;255;255;255;48;2;255;13;104m   ████ ████████▀    [0m │                                     │
+  │ [48;2;255;13;104m                     [0m │                                     │
+  │ Build Fast. Run Fast. │                                     │
+  └───────────────────────┴─────────────────────────────────────┘
+
+2025-08-01 20:57:56,343 - DEBUG - Creating multiprocessing context using 'spawn'
+2025-08-01 20:57:56,344 - DEBUG - [34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+2025-08-01 20:57:56,791 - DEBUG - [34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[14940][0m
+2025-08-01 20:57:56,792 - INFO - <Server sockets=(<asyncio.TransportSocket fd=792, family=2, type=1, proto=6, laddr=('0.0.0.0', 8000)>,)> is serving
+2025-08-01 20:57:56,801 - INFO - Starting worker [14940]
+2025-08-01 20:58:10,867 - INFO - 收到图片上传请求
+2025-08-01 20:58:10,903 - INFO - 文件保存成功: uploads\6fc18aa0bbf85d89_DSC08962.JPG
+2025-08-01 20:58:10,903 - INFO - 开始极致超级清晰增强: uploads\6fc18aa0bbf85d89_DSC08962.JPG
+2025-08-01 20:58:10,947 - INFO - 开始修复图片方向...
+2025-08-01 20:58:10,950 - INFO - 检测到图片方向信息: 8
+2025-08-01 20:58:11,082 - INFO - 图片旋转90度
+2025-08-01 20:58:18,783 - INFO - 图片已高质量放大到 24576x36864
+2025-08-01 20:58:28,226 - INFO - Received signal SIGINT. Shutting down.
+2025-08-01 20:58:28,226 - DEBUG - [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[14940][0m
+2025-08-01 20:58:28,227 - INFO - Server Stopped
+2025-08-01 20:58:32,460 - INFO - 应用启动
+2025-08-01 20:58:32,511 - INFO - 
+  ┌─────────────────────────────────────────────────────────────┐
+  │                        Sanic v23.6.0                        │
+  │               Goin' Fast @ http://0.0.0.0:8000              │
+  ├───────────────────────┬─────────────────────────────────────┤
+  │ [48;2;255;13;104m                     [0m │     mode: debug, single worker      │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▄███ █████ ██    [0m │   server: sanic, HTTP/1.1           │
+  │ [38;2;255;255;255;48;2;255;13;104m   ██                [0m │   python: 3.12.8                    │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▀███████ ███▄    [0m │ platform: Windows-11-10.0.26100-SP0 │
+  │ [38;2;255;255;255;48;2;255;13;104m                ██   [0m │ packages: sanic-routing==23.12.0    │
+  │ [38;2;255;255;255;48;2;255;13;104m   ████ ████████▀    [0m │                                     │
+  │ [48;2;255;13;104m                     [0m │                                     │
+  │ Build Fast. Run Fast. │                                     │
+  └───────────────────────┴─────────────────────────────────────┘
+
+2025-08-01 20:58:32,917 - DEBUG - Creating multiprocessing context using 'spawn'
+2025-08-01 20:58:32,918 - DEBUG - [34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+2025-08-01 20:58:33,337 - DEBUG - [34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[12808][0m
+2025-08-01 20:58:33,338 - INFO - <Server sockets=(<asyncio.TransportSocket fd=472, family=2, type=1, proto=6, laddr=('0.0.0.0', 8000)>,)> is serving
+2025-08-01 20:58:33,340 - INFO - Starting worker [12808]
+2025-08-01 20:59:27,436 - INFO - 收到图片上传请求
+2025-08-01 20:59:27,448 - INFO - 文件保存成功: uploads\9854f055aa13f627_DSC08968.JPG
+2025-08-01 20:59:27,448 - INFO - 开始基础增强: uploads\9854f055aa13f627_DSC08968.JPG
+2025-08-01 20:59:27,465 - INFO - 开始修复图片方向...
+2025-08-01 20:59:27,466 - INFO - 检测到图片方向信息: 1
+2025-08-01 20:59:28,138 - INFO - 图片已放大到 9216x6144
+2025-08-01 20:59:28,926 - INFO - 图片已轻微锐化
+2025-08-01 20:59:29,421 - INFO - 图片对比度已增强
+2025-08-01 20:59:29,742 - INFO - 图片亮度已增强
+2025-08-01 20:59:29,742 - INFO - 基础增强完成: uploads\9854f055aa13f627_DSC08968.JPG
+2025-08-01 20:59:29,919 - INFO - 图片处理成功: uploads\9854f055aa13f627_DSC08968.JPG
+2025-08-01 20:59:29,947 - INFO - 临时文件清理成功: uploads\9854f055aa13f627_DSC08968.JPG
+2025-08-01 20:59:29,953 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 20:59:29,956 - INFO - 
+2025-08-01 20:59:29,959 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 2.516 seconds
+2025-08-01 21:01:57,478 - DEBUG - KeepAlive Timeout. Closing connection.
+2025-08-01 21:04:11,458 - INFO - 收到图片上传请求
+2025-08-01 21:04:11,466 - INFO - 文件保存成功: uploads\5bbf49c5be5a00c4_DSC08968.JPG
+2025-08-01 21:04:11,466 - INFO - 开始极致超级清晰增强: uploads\5bbf49c5be5a00c4_DSC08968.JPG
+2025-08-01 21:04:11,474 - INFO - 开始修复图片方向...
+2025-08-01 21:04:11,475 - INFO - 检测到图片方向信息: 1
+2025-08-01 21:04:13,497 - INFO - 图片已高质量放大到 18432x12288
+2025-08-01 21:04:16,622 - INFO - 图片已多级锐化处理
+2025-08-01 21:04:19,787 - INFO - 图片已多级锐化处理
+2025-08-01 21:04:23,379 - INFO - 图片已多级锐化处理
+2025-08-01 21:04:26,342 - INFO - 图片对比度已增强
+2025-08-01 21:04:29,056 - INFO - 图片饱和度已增强
+2025-08-01 21:04:31,522 - INFO - 图片亮度已调整
+2025-08-01 21:04:36,786 - INFO - 图片已再次锐化
+2025-08-01 21:04:42,346 - INFO - 图片已最终边缘增强
+2025-08-01 21:04:47,663 - INFO - 图片已最终锐化
+2025-08-01 21:04:47,663 - INFO - 极致超级清晰增强完成: uploads\5bbf49c5be5a00c4_DSC08968.JPG
+2025-08-01 21:04:50,041 - INFO - 图片处理成功: uploads\5bbf49c5be5a00c4_DSC08968.JPG
+2025-08-01 21:04:50,770 - INFO - 临时文件清理成功: uploads\5bbf49c5be5a00c4_DSC08968.JPG
+2025-08-01 21:04:50,818 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:04:50,930 - INFO - 
+2025-08-01 21:04:50,989 - WARNING - Executing <Task pending name='Task-11' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 39.531 seconds
+2025-08-01 21:05:26,844 - INFO - 收到图片上传请求
+2025-08-01 21:05:26,852 - INFO - 文件保存成功: uploads\630bff94d2251856_DSC08968.JPG
+2025-08-01 21:05:26,852 - INFO - 开始极致超级清晰增强: uploads\630bff94d2251856_DSC08968.JPG
+2025-08-01 21:05:26,861 - INFO - 开始修复图片方向...
+2025-08-01 21:05:26,862 - INFO - 检测到图片方向信息: 1
+2025-08-01 21:05:28,882 - INFO - 图片已高质量放大到 18432x12288
+2025-08-01 21:05:31,967 - INFO - 图片已多级锐化处理
+2025-08-01 21:05:35,062 - INFO - 图片已多级锐化处理
+2025-08-01 21:05:38,638 - INFO - 图片已多级锐化处理
+2025-08-01 21:05:41,577 - INFO - 图片对比度已增强
+2025-08-01 21:05:44,264 - INFO - 图片饱和度已增强
+2025-08-01 21:05:46,730 - INFO - 图片亮度已调整
+2025-08-01 21:05:51,978 - INFO - 图片已再次锐化
+2025-08-01 21:05:57,515 - INFO - 图片已最终边缘增强
+2025-08-01 21:06:02,800 - INFO - 图片已最终锐化
+2025-08-01 21:06:02,800 - INFO - 极致超级清晰增强完成: uploads\630bff94d2251856_DSC08968.JPG
+2025-08-01 21:06:05,135 - INFO - 图片处理成功: uploads\630bff94d2251856_DSC08968.JPG
+2025-08-01 21:06:05,858 - INFO - 临时文件清理成功: uploads\630bff94d2251856_DSC08968.JPG
+2025-08-01 21:06:05,910 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:06:06,020 - INFO - 
+2025-08-01 21:06:06,081 - WARNING - Executing <Task pending name='Task-11' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 39.235 seconds
+2025-08-01 21:06:48,394 - INFO - Received signal SIGINT. Shutting down.
+2025-08-01 21:06:48,394 - DEBUG - [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[12808][0m
+2025-08-01 21:06:48,395 - INFO - Server Stopped
+2025-08-01 21:06:51,524 - INFO - 应用启动
+2025-08-01 21:06:51,615 - INFO - 
+  ┌─────────────────────────────────────────────────────────────┐
+  │                        Sanic v23.6.0                        │
+  │               Goin' Fast @ http://0.0.0.0:8000              │
+  ├───────────────────────┬─────────────────────────────────────┤
+  │ [48;2;255;13;104m                     [0m │     mode: debug, single worker      │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▄███ █████ ██    [0m │   server: sanic, HTTP/1.1           │
+  │ [38;2;255;255;255;48;2;255;13;104m   ██                [0m │   python: 3.12.8                    │
+  │ [38;2;255;255;255;48;2;255;13;104m    ▀███████ ███▄    [0m │ platform: Windows-11-10.0.26100-SP0 │
+  │ [38;2;255;255;255;48;2;255;13;104m                ██   [0m │ packages: sanic-routing==23.12.0    │
+  │ [38;2;255;255;255;48;2;255;13;104m   ████ ████████▀    [0m │                                     │
+  │ [48;2;255;13;104m                     [0m │                                     │
+  │ Build Fast. Run Fast. │                                     │
+  └───────────────────────┴─────────────────────────────────────┘
+
+2025-08-01 21:06:52,019 - DEBUG - Creating multiprocessing context using 'spawn'
+2025-08-01 21:06:52,020 - DEBUG - [34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+2025-08-01 21:06:52,419 - DEBUG - [34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[13348][0m
+2025-08-01 21:06:52,422 - INFO - <Server sockets=(<asyncio.TransportSocket fd=748, family=2, type=1, proto=6, laddr=('0.0.0.0', 8000)>,)> is serving
+2025-08-01 21:06:52,423 - INFO - Starting worker [13348]
+2025-08-01 21:06:59,967 - INFO - 收到图片上传请求
+2025-08-01 21:06:59,977 - INFO - 文件保存成功: uploads\7157c58007c449d8_DSC08968.JPG
+2025-08-01 21:06:59,977 - INFO - 开始极致超级清晰增强: uploads\7157c58007c449d8_DSC08968.JPG
+2025-08-01 21:06:59,994 - INFO - 开始修复图片方向...
+2025-08-01 21:06:59,996 - INFO - 检测到图片方向信息: 1
+2025-08-01 21:07:03,109 - INFO - 图片已高质量放大到 23040x15360
+2025-08-01 21:07:08,085 - INFO - 图片已多级锐化处理
+2025-08-01 21:07:13,049 - INFO - 图片已多级锐化处理
+2025-08-01 21:07:18,576 - INFO - 图片已多级锐化处理
+2025-08-01 21:07:23,182 - INFO - 图片对比度已增强
+2025-08-01 21:07:27,408 - INFO - 图片饱和度已增强
+2025-08-01 21:07:31,112 - INFO - 图片亮度已调整
+2025-08-01 21:07:39,029 - INFO - 图片已再次锐化
+2025-08-01 21:07:48,092 - INFO - 图片已最终边缘增强
+2025-08-01 21:07:56,724 - INFO - 图片已最终锐化
+2025-08-01 21:07:56,725 - INFO - 极致超级清晰增强完成: uploads\7157c58007c449d8_DSC08968.JPG
+2025-08-01 21:08:00,338 - INFO - 图片处理成功: uploads\7157c58007c449d8_DSC08968.JPG
+2025-08-01 21:08:01,535 - INFO - 临时文件清理成功: uploads\7157c58007c449d8_DSC08968.JPG
+2025-08-01 21:08:01,608 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:08:01,777 - INFO - 
+2025-08-01 21:08:01,895 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 61.922 seconds
+2025-08-01 21:08:34,967 - INFO - 收到图片上传请求
+2025-08-01 21:08:34,976 - INFO - 文件保存成功: uploads\51e976cb576c5d0b_DSC08968.JPG
+2025-08-01 21:08:34,976 - INFO - 开始极致超级清晰增强: uploads\51e976cb576c5d0b_DSC08968.JPG
+2025-08-01 21:08:34,983 - INFO - 开始修复图片方向...
+2025-08-01 21:08:34,984 - INFO - 检测到图片方向信息: 1
+2025-08-01 21:08:38,197 - INFO - 图片已高质量放大到 23040x15360
+2025-08-01 21:08:43,290 - INFO - 图片已多级锐化处理
+2025-08-01 21:08:48,375 - INFO - 图片已多级锐化处理
+2025-08-01 21:08:54,032 - INFO - 图片已多级锐化处理
+2025-08-01 21:08:58,728 - INFO - 图片对比度已增强
+2025-08-01 21:09:02,789 - INFO - 图片饱和度已增强
+2025-08-01 21:09:06,489 - INFO - 图片亮度已调整
+2025-08-01 21:09:14,835 - INFO - 图片已再次锐化
+2025-08-01 21:09:23,918 - INFO - 图片已最终边缘增强
+2025-08-01 21:09:32,588 - INFO - 图片已最终锐化
+2025-08-01 21:09:32,589 - INFO - 极致超级清晰增强完成: uploads\51e976cb576c5d0b_DSC08968.JPG
+2025-08-01 21:09:36,338 - INFO - 图片处理成功: uploads\51e976cb576c5d0b_DSC08968.JPG
+2025-08-01 21:09:37,526 - INFO - 临时文件清理成功: uploads\51e976cb576c5d0b_DSC08968.JPG
+2025-08-01 21:09:37,611 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:09:37,791 - INFO - 
+2025-08-01 21:09:37,911 - WARNING - Executing <Task pending name='Task-7' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 62.938 seconds
+2025-08-01 21:09:37,968 - INFO - 收到图片上传请求
+2025-08-01 21:09:37,977 - INFO - 文件保存成功: uploads\8818410bdf719497_DSC08962.JPG
+2025-08-01 21:09:37,977 - INFO - 开始超级质量增强: uploads\8818410bdf719497_DSC08962.JPG
+2025-08-01 21:09:37,984 - INFO - 开始修复图片方向...
+2025-08-01 21:09:37,985 - INFO - 检测到图片方向信息: 8
+2025-08-01 21:09:38,120 - INFO - 图片旋转90度
+2025-08-01 21:09:38,757 - INFO - 图片已高质量放大到 6144x9216
+2025-08-01 21:09:39,574 - INFO - 图片已温和锐化处理
+2025-08-01 21:09:40,098 - INFO - 图片对比度已增强
+2025-08-01 21:09:40,526 - INFO - 图片饱和度已增强
+2025-08-01 21:09:40,904 - INFO - 图片亮度已调整
+2025-08-01 21:09:41,787 - INFO - 图片已细节增强
+2025-08-01 21:09:41,787 - INFO - 超级质量增强完成: uploads\8818410bdf719497_DSC08962.JPG
+2025-08-01 21:09:42,081 - INFO - 图片处理成功: uploads\8818410bdf719497_DSC08962.JPG
+2025-08-01 21:09:42,150 - INFO - 临时文件清理成功: uploads\8818410bdf719497_DSC08962.JPG
+2025-08-01 21:09:42,158 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:09:42,164 - INFO - 
+2025-08-01 21:09:42,171 - WARNING - Executing <Task pending name='Task-12' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 4.203 seconds
+2025-08-01 21:11:56,974 - INFO - 收到图片上传请求
+2025-08-01 21:11:56,982 - INFO - 文件保存成功: uploads\2291de24e40d2c48_DSC08962.JPG
+2025-08-01 21:11:56,983 - INFO - 开始极致超级清晰增强: uploads\2291de24e40d2c48_DSC08962.JPG
+2025-08-01 21:11:56,992 - INFO - 开始修复图片方向...
+2025-08-01 21:11:56,993 - INFO - 检测到图片方向信息: 8
+2025-08-01 21:11:57,126 - INFO - 图片旋转90度
+2025-08-01 21:12:00,233 - INFO - 图片已高质量放大到 15360x23040
+2025-08-01 21:12:05,469 - INFO - 图片已多级锐化处理
+2025-08-01 21:12:10,436 - INFO - 图片已多级锐化处理
+2025-08-01 21:12:16,407 - INFO - 图片已多级锐化处理
+2025-08-01 21:12:21,542 - INFO - 图片对比度已增强
+2025-08-01 21:12:26,322 - INFO - 图片饱和度已增强
+2025-08-01 21:12:30,766 - INFO - 图片亮度已调整
+2025-08-01 21:12:38,994 - INFO - 图片已再次锐化
+2025-08-01 21:12:48,061 - INFO - 图片已最终边缘增强
+2025-08-01 21:12:56,707 - INFO - 图片已最终锐化
+2025-08-01 21:12:56,708 - INFO - 极致超级清晰增强完成: uploads\2291de24e40d2c48_DSC08962.JPG
+2025-08-01 21:13:00,375 - INFO - 图片处理成功: uploads\2291de24e40d2c48_DSC08962.JPG
+2025-08-01 21:13:01,538 - INFO - 临时文件清理成功: uploads\2291de24e40d2c48_DSC08962.JPG
+2025-08-01 21:13:01,611 - DEBUG - Sanic-CORS: Request to '/api/upload' matches CORS resource '/*'. Using options: {'origins': ['.*'], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': None, 'supports_credentials': False, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': '/*', 'intercept_exceptions': True, 'always_send': True}
+2025-08-01 21:13:01,788 - INFO - 
+2025-08-01 21:13:01,903 - WARNING - Executing <Task pending name='Task-12' coro=<HttpProtocol.connection_task() running at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:153> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py:448> created at C:\Users\root\AppData\Local\Programs\Python\Python312\Lib\site-packages\sanic\server\protocols\http_protocol.py:265> took 64.922 seconds
+2025-08-01 21:15:01,882 - DEBUG - KeepAlive Timeout. Closing connection.
+2025-08-01 21:17:22,201 - INFO - Received signal SIGINT. Shutting down.
+2025-08-01 21:17:22,201 - DEBUG - [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[13348][0m
+2025-08-01 21:17:22,202 - INFO - Server Stopped

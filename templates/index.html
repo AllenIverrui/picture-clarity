@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片高清化工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .upload-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 15px;
+            padding: 60px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #e8f0ff;
+        }
+
+        .upload-icon {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .upload-text {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .upload-hint {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .method-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .method-option {
+            padding: 15px 30px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .method-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .method-option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .process-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .process-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .process-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .image-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            color: #e74c3c;
+            background: #fdf2f2;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .success {
+            color: #27ae60;
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .download-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .download-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .image-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .method-selection {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖼️ 图片高清化工具</h1>
+            <p>使用先进的AI技术，将您的图片转换为高清版本</p>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">点击或拖拽图片到此处</div>
+                    <div class="upload-hint">支持 JPG, PNG, GIF, BMP 格式，最大 16MB</div>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+
+                <div class="method-selection">
+                    <div class="method-option" data-method="traditional">
+                        <strong>传统增强</strong><br>
+                        <small>快速处理，适合一般用途</small>
+                    </div>
+                    <div class="method-option selected" data-method="deep_learning">
+                        <strong>AI深度学习</strong><br>
+                        <small>更高质量，需要更多时间</small>
+                    </div>
+                    <div class="method-option" data-method="advanced">
+                        <strong>高级混合</strong><br>
+                        <small>结合传统和AI方法</small>
+                    </div>
+                    <div class="method-option" data-method="quality">
+                        <strong>质量优先</strong><br>
+                        <small>最高质量，处理较慢</small>
+                    </div>
+                </div>
+
+                <button class="process-btn" id="processBtn" disabled>开始处理</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>正在处理图片，请稍候...</p>
+            </div>
+
+            <div class="error" id="error"></div>
+            <div class="success" id="success"></div>
+
+            <div class="results-section" id="resultsSection">
+                <div class="image-comparison">
+                    <div class="image-container">
+                        <h3>原始图片</h3>
+                        <img id="originalImage" class="image-preview" alt="原始图片">
+                    </div>
+                    <div class="image-container">
+                        <h3>高清图片</h3>
+                        <img id="enhancedImage" class="image-preview" alt="高清图片">
+                        <button class="download-btn" id="downloadBtn">下载高清图片</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const processBtn = document.getElementById('processBtn');
+        const loading = document.getElementById('loading');
+        const error = document.getElementById('error');
+        const success = document.getElementById('success');
+        const resultsSection = document.getElementById('resultsSection');
+        const originalImage = document.getElementById('originalImage');
+        const enhancedImage = document.getElementById('enhancedImage');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const methodOptions = document.querySelectorAll('.method-option');
+
+        let selectedFile = null;
+        let selectedMethod = 'deep_learning';
+
+        // 文件选择处理
+        uploadArea.addEventListener('click', () => fileInput.click());
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileSelect(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileSelect(e.target.files[0]);
+            }
+        });
+
+        // 方法选择处理
+        methodOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                methodOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                selectedMethod = option.dataset.method;
+            });
+        });
+
+        // 处理按钮点击
+        processBtn.addEventListener('click', processImage);
+
+        // 下载按钮点击
+        downloadBtn.addEventListener('click', downloadImage);
+
+        function handleFileSelect(file) {
+            if (!file.type.startsWith('image/')) {
+                showError('请选择有效的图片文件');
+                return;
+            }
+
+            if (file.size > 16 * 1024 * 1024) {
+                showError('文件大小不能超过16MB');
+                return;
+            }
+
+            selectedFile = file;
+            processBtn.disabled = false;
+
+            // 显示原始图片预览
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                originalImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+
+            hideError();
+            hideSuccess();
+        }
+
+        function processImage() {
+            if (!selectedFile) return;
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('method', selectedMethod);
+
+            loading.style.display = 'block';
+            processBtn.disabled = true;
+            hideError();
+            hideSuccess();
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                loading.style.display = 'none';
+                processBtn.disabled = false;
+
+                if (data.success) {
+                    enhancedImage.src = data.enhanced_image;
+                    resultsSection.style.display = 'block';
+                    showSuccess('图片处理成功！');
+                } else {
+                    showError(data.error || '处理失败，请重试');
+                }
+            })
+            .catch(err => {
+                loading.style.display = 'none';
+                processBtn.disabled = false;
+                showError('网络错误，请重试');
+                console.error('Error:', err);
+            });
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'enhanced_image.jpg';
+            link.href = enhancedImage.src;
+            link.click();
+        }
+
+        function showError(message) {
+            error.textContent = message;
+            error.style.display = 'block';
+        }
+
+        function hideError() {
+            error.style.display = 'none';
+        }
+
+        function showSuccess(message) {
+            success.textContent = message;
+            success.style.display = 'block';
+        }
+
+        function hideSuccess() {
+            success.style.display = 'none';
+        }
+    </script>
+</body>
+</html> 
